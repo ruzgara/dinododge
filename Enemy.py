@@ -10,12 +10,12 @@ class Enemy(pygame.sprite.Sprite):
             self.screenHeight = screenHeight
             self.gravity = gravity
             self.scoreUpdate = scoreUpdate
-            self.base = loadImage("images/meteor_base", colorkey=(255, 0, 255)) #load the image
+            # self.base = loadImage("images/meteor_base", colorkey=(255, 0, 255)) #load the image
             self.surf = pygame.Surface((48,76)) # define the surface
             # place enemy at random x value
             self.rect = self.surf.get_rect(center = (random.randint(40, screenWidth - 40), 0))
             #self.fires = [loadImage("images/fire" + str(i), colorkey= (255, 0, 255)) for i in [1,2]]
-            self.image = loadImage("images/gimp/meteor", colorkey= (255, 255, 255))
+            self.image = loadImage("images/meteor", colorkey= (255, 255, 255))
             #self.base.blit(self.fires[1])
             #self.fireNum = 1
         
