@@ -1,6 +1,6 @@
 ./.vscode
 ./.idea
 src/__pycache__
-./build
-./dist
-./output
+build/
+dist/
+output/
