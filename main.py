@@ -339,7 +339,7 @@ async def main():
 
             #Set fonts
             titleFont = font.render("DinoDodge", True, BLACK)
-            nameFont = fontSmall.render("By DrTipmack", True, BLACK)
+            nameFont = fontSmall.render("By Rüzgar Altıner", True, BLACK)
 
             if firstSplashFrame:
                 pygame.time.set_timer(animationMove, 1000)
@@ -397,7 +397,7 @@ async def main():
             dinoSurf = pygame.Surface(dino.get_size())
             dinoRect = dinoSurf.get_rect(midbottom=(screenWidth / 2, dinoY))
             screen.blit(dino, dinoRect)
-        watermark = fontTiny.render("Made by Ruzgar Altiner", True, RED)
+        watermark = fontTiny.render("Made by Rüzgar Altıner", True, RED)
         screen.blit(watermark, ((screenWidth - watermark.get_size()[0]), screenHeight - watermark.get_size()[1]))
 
         # Go through events
