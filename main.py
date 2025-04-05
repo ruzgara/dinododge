@@ -1,5 +1,5 @@
 import random
-
+import asyncio
 import pygame
 
 from Coin import Coin
@@ -9,7 +9,7 @@ from utils import *
 
 import sys
 
-def main():
+async def main():
     #-----SETUP-----
 
     # Initialise
@@ -397,7 +397,7 @@ def main():
             dinoSurf = pygame.Surface(dino.get_size())
             dinoRect = dinoSurf.get_rect(midbottom=(screenWidth / 2, dinoY))
             screen.blit(dino, dinoRect)
-        watermark = fontTiny.render("Made by DrTipmack", True, RED)
+        watermark = fontTiny.render("Made by Ruzgar Altiner", True, RED)
         screen.blit(watermark, ((screenWidth - watermark.get_size()[0]), screenHeight - watermark.get_size()[1]))
 
         # Go through events
@@ -428,6 +428,7 @@ def main():
 
         # make sure game runs at FPS
         FramesPerSecond.tick(FPS)
+        await asyncio.sleep(0)
         pygame.display.update()
 if __name__ == "__main__":
-    main()
+    asyncio.run(main())

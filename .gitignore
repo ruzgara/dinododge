@@ -1,7 +1,6 @@
 .vscode/
 .idea/
 __pycache__/
-build/
 dist/
 output/
 .DS_Store
